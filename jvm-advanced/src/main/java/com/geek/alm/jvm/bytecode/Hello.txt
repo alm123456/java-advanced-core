@@ -1,0 +1,161 @@
+Last modified 2021-9-14; size 934 bytes
+  MD5 checksum f2a39f1021161ec2977e893cea5be0e7
+  Compiled from "Hello.java"
+public class Hello
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:    ////常量池
+   #1 = Methodref          #9.#37         // java/lang/Object."<init>":()V
+   #2 = Class              #38            // com/jiketime/alm/jvm/bytecode/Hello
+   #3 = Methodref          #2.#37         // com/jiketime/alm/jvm/bytecode/Hello."<init>":()V
+   #4 = Fieldref           #2.#39         // com/jiketime/alm/jvm/bytecode/Hello.nums:[I
+   #5 = Methodref          #2.#40         // com/jiketime/alm/jvm/bytecode/Hello.addition:(J)V
+   #6 = Fieldref           #41.#42        // java/lang/System.out:Ljava/io/PrintStream;
+   #7 = Fieldref           #2.#43         // com/jiketime/alm/jvm/bytecode/Hello.num:J
+   #8 = Methodref          #44.#45        // java/io/PrintStream.println:(J)V
+   #9 = Class              #46            // java/lang/Object
+  #10 = Utf8               num
+  #11 = Utf8               J
+  #12 = Utf8               nums
+  #13 = Utf8               [I
+  #14 = Utf8               <init>
+  #15 = Utf8               ()V
+  #16 = Utf8               Code
+  #17 = Utf8               LineNumberTable
+  #18 = Utf8               LocalVariableTable
+  #19 = Utf8               this
+  #20 = Utf8               Lcom/jiketime/alm/jvm/bytecode/Hello;
+  #21 = Utf8               main
+  #22 = Utf8               ([Ljava/lang/String;)V
+  #23 = Utf8               i
+  #24 = Utf8               I
+  #25 = Utf8               args
+  #26 = Utf8               [Ljava/lang/String;
+  #27 = Utf8               hello
+  #28 = Utf8               StackMapTable
+  #29 = Class              #26            // "[Ljava/lang/String;"
+  #30 = Class              #38            // com/jiketime/alm/jvm/bytecode/Hello
+  #31 = Class              #13            // "[I"
+  #32 = Utf8               addition
+  #33 = Utf8               (J)V
+  #34 = Utf8               <clinit>
+  #35 = Utf8               SourceFile
+  #36 = Utf8               Hello.java
+  #37 = NameAndType        #14:#15        // "<init>":()V
+  #38 = Utf8               com/jiketime/alm/jvm/bytecode/Hello
+  #39 = NameAndType        #12:#13        // nums:[I
+  #40 = NameAndType        #32:#33        // addition:(J)V
+  #41 = Class              #47            // java/lang/System
+  #42 = NameAndType        #48:#49        // out:Ljava/io/PrintStream;
+  #43 = NameAndType        #10:#11        // num:J
+  #44 = Class              #50            // java/io/PrintStream
+  #45 = NameAndType        #51:#33        // println:(J)V
+  #46 = Utf8               java/lang/Object
+  #47 = Utf8               java/lang/System
+  #48 = Utf8               out
+  #49 = Utf8               Ljava/io/PrintStream;
+  #50 = Utf8               java/io/PrintStream
+  #51 = Utf8               println
+{
+  public Hello();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1    ////栈 本地变量 参数大小 
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:    //// 7代码中的位置（行数） 0偏移量
+        line 7: 0
+      LocalVariableTable:   ////本地变量表
+                     ////槽位
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/jiketime/alm/jvm/bytecode/Hello;
+
+  public static void main(java.lang.String[]);  ////main方法
+    descriptor: ([Ljava/lang/String;)V    ////L表示对象。  java/lang/String对象类型。  V返回void
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=6, args_size=1
+         0: new           #2                  // class com/jiketime/alm/jvm/bytecode/Hello
+         3: dup
+         4: invokespecial #3                  // Method "<init>":()V
+            ////0-4 new一个Hello实例
+         7: astore_1
+            ////将引用地址值(addr.)存储(store)到编号为 1 的局部变量中
+         8: getstatic     #4                  // Field nums:[I
+            ////获取常量池中的nums
+        11: arraylength
+        12: ifle          49
+        15: getstatic     #4                  // Field nums:[I
+        18: astore_2
+        19: aload_2
+        20: arraylength
+        21: istore_3
+        22: iconst_0
+        23: istore        4
+        25: iload         4
+        27: iload_3
+        28: if_icmpge     49
+        31: aload_2
+        32: iload         4
+        34: iaload
+        35: istore        5
+        37: iload         5
+        39: i2l
+        40: invokestatic  #5                  // Method addition:(J)V
+        43: iinc          4, 1
+        46: goto          25
+        49: getstatic     #6                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        52: getstatic     #7                  // Field num:J
+        55: invokevirtual #8                  // Method java/io/PrintStream.println:(J)V
+        58: return
+      LineNumberTable:
+        line 11: 0
+        line 12: 8
+        line 13: 15
+        line 14: 37
+        line 13: 43
+        line 17: 49
+        line 18: 58
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           37       6     5     i   I
+            0      59     0  args   [Ljava/lang/String;
+            8      51     1 hello   Lcom/jiketime/alm/jvm/bytecode/Hello;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 25
+          locals = [ class "[Ljava/lang/String;", class com/jiketime/alm/jvm/bytecode/Hello, class "[I", int, int ]
+          stack = []
+        frame_type = 248 /* chop */
+          offset_delta = 23
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=4, locals=0, args_size=0
+         0: lconst_0
+         1: putstatic     #7                  // Field num:J
+         4: iconst_3
+         5: newarray       int
+         7: dup
+         8: iconst_0
+         9: iconst_1
+        10: iastore
+        11: dup
+        12: iconst_1
+        13: iconst_5
+        14: iastore
+        15: dup
+        16: iconst_2
+        17: bipush        7
+        19: iastore
+        20: putstatic     #4                  // Field nums:[I
+        23: return
+      LineNumberTable:
+        line 8: 0
+        line 9: 4
+}
