@@ -8,7 +8,8 @@ import java.util.Base64;
  */
 public class HelloClassLoad extends ClassLoader {
     public static void main(String[] args) throws Exception {
-        Class classz = new HelloClassLoadTest().findClass("Hello");
+        Class classz = new HelloClassLoad().findClass("Hello");
+        //通过反射
         classz.getMethod("hello").invoke(classz.newInstance());
     }
 
@@ -18,7 +19,7 @@ public class HelloClassLoad extends ClassLoader {
         byte[] bytes = Base64.getDecoder().decode(base64Str);
         byte[] resultBytes = new byte[bytes.length];
         for (int i = 0; i < bytes.length; i++) {
-            resultBytes[i] = (byte) (255 - bytes[i]);
+            resultBytes[i] = (byte) (0b011111111 - bytes[i]);
         }
         return defineClass(name, resultBytes, 0, resultBytes.length);
     }

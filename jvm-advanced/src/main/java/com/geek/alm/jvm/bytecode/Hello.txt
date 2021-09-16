@@ -97,7 +97,7 @@ Constant pool:    ////常量池
         23: istore        4
         25: iload         4
         27: iload_3
-        28: if_icmpge     49
+        28: if_icmpge     49        ////if + goto == for
         31: aload_2
         32: iload         4
         34: iaload
